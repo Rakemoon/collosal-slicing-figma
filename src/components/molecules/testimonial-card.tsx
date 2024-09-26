@@ -16,7 +16,7 @@ export default function TestimonialCard ({ children, image, name, company }: Tes
                 alt="Testimonial Image"
                 width={90}
                 height={90}
-                className="rounded-md aspect-square w-20 h-20 object-cover"
+                className="rounded-full aspect-square w-20 h-20 object-cover"
             />
             <div className="rounded-full border-carddark bg-primary absolute bottom-0 right-0 border-4 aspect-square w-6 h-6 grid place-content-center">
                 <span>{'"'}</span>
