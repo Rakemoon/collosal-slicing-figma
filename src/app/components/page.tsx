@@ -7,6 +7,8 @@ import Navbar from "#components/organism/navbar";
 import PricingCard from "#components/organism/pricing-card";
 import LogoSponsors from "#components/molecules/logo-sponsors";
 import TestimonialCard from "#components/molecules/testimonial-card";
+import TeamCard from "#components/molecules/team-card";
+import BlogCard from "#components/molecules/blog-card";
 
 export default function Components() {
     return <div className="grid place-content-center min-h-screen bg-dark text-muted gap-4 p-2">
@@ -288,5 +290,14 @@ export default function Components() {
             company="Company">
            {"'This is a testimonial text'"} 
         </TestimonialCard>
+        <TeamCard name="Team Name" job="job" />
+        <BlogCard
+            title="SEO tricks that can increase the traffic of your website"
+            summary="People have been using wrong SEO techniques on their websites."
+            author={{
+                name: "Jane Cooper",
+                foot: "Mar 18 . 5 min read"
+            }}
+        />
     </div>
 }
