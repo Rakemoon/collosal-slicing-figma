@@ -6,6 +6,7 @@ import Footer from "#components/organism/footer";
 import Navbar from "#components/organism/navbar";
 import PricingCard from "#components/organism/pricing-card";
 import LogoSponsors from "#components/molecules/logo-sponsors";
+import TestimonialCard from "#components/molecules/testimonial-card";
 
 export default function Components() {
     return <div className="grid place-content-center min-h-screen bg-dark text-muted gap-4 p-2">
@@ -282,5 +283,10 @@ export default function Components() {
         <LogoSponsors>
             hahah
         </LogoSponsors>
+        <TestimonialCard
+            name="Name"
+            company="Company">
+           {"'This is a testimonial text'"} 
+        </TestimonialCard>
     </div>
 }
