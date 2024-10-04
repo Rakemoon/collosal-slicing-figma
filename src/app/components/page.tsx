@@ -9,11 +9,13 @@ import LogoSponsors from "#components/molecules/logo-sponsors";
 import TestimonialCard from "#components/molecules/testimonial-card";
 import TeamCard from "#components/molecules/team-card";
 import BlogCard from "#components/molecules/blog-card";
+import FaqAccordion from "#components/molecules/faq-accordion";
+import PageDescription from "#components/atoms/page-description";
 
 export default function Components() {
-    return <div className="grid place-content-center min-h-screen bg-dark text-muted gap-4 p-2">
+    return <div className="grid place-content-center min-h-screen bg-dark text-muted gap-4 p-2 max-w-full">
         <h1 className="text-4xl font-bold w-fit mx-auto pb-5">Components List</h1>
-        <div className="p-2 border-dashed border-2 border-highlight gap-2 flex flex-wrap items-center">
+        <div className="p-2 border-dashed border-2 border-highlight gap-2 flex flex-wrap items-center w-fit">
             <Button
                 colorScheme="primary"
                 colorVariant="solid"
@@ -229,7 +231,7 @@ export default function Components() {
                             ]
                         },
                     ]
-                }/>
+                } />
         </div>
         <Callout message="We've prepared everything, it's time for you to tell the problem">
             <Button>Send Quote</Button>
@@ -239,47 +241,47 @@ export default function Components() {
             <FeatureCard
                 title="Feature Title"
                 icon={<FigmaIcon />}>
-                    Feature Description
+                Feature Description
             </FeatureCard>
             <FeatureCard
                 title="Feature Title"
                 icon={<FigmaIcon />}>
-                    Feature Description
+                Feature Description
             </FeatureCard>
             <FeatureCard
                 title="Feature Title"
                 icon={<FigmaIcon />}>
-                    Feature Description
+                Feature Description
             </FeatureCard>
             <FeatureCard
                 title="Feature Title"
                 icon={<FigmaIcon />}>
-                    Feature Description
+                Feature Description
             </FeatureCard>
             <FeatureCard
                 title="Feature Title"
                 icon={<FigmaIcon />}>
-                    Feature Description
+                Feature Description
             </FeatureCard>
             <FeatureCard
                 title="Feature Title"
                 icon={<FigmaIcon />}>
-                    Feature Description
+                Feature Description
             </FeatureCard>
             <FeatureCard
                 title="Feature Title"
                 icon={<FigmaIcon />}>
-                    Feature Description
+                Feature Description
             </FeatureCard>
             <FeatureCard
                 title="Feature Title"
                 icon={<FigmaIcon />}>
-                    Feature Description
+                Feature Description
             </FeatureCard>
             <FeatureCard
                 title="Feature Title"
                 icon={<FigmaIcon />}>
-                    Feature Description
+                Feature Description
             </FeatureCard>
         </div>
         <LogoSponsors>
@@ -288,7 +290,7 @@ export default function Components() {
         <TestimonialCard
             name="Name"
             company="Company">
-           {"'This is a testimonial text'"} 
+            {"'This is a testimonial text'"}
         </TestimonialCard>
         <TeamCard name="Team Name" job="job" />
         <BlogCard
@@ -299,5 +301,8 @@ export default function Components() {
                 foot: "Mar 18 . 5 min read"
             }}
         />
+        <FaqAccordion title="How is the payment system?">
+            <PageDescription>If the project has agreed, you will pay an advance, and when the progress reaches 50% you will make a second payment, and when the progress is 100% you will pay it off.</PageDescription>
+        </FaqAccordion>
     </div>
 }
