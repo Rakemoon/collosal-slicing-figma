@@ -75,31 +75,72 @@ export default function Home() {
           color="#16FCD2"
           width="200px"
           height="200px"
-          className="absolute top-[400px] left-[400px]"/>
+          className="absolute top-[200px] left-[400px]"/>
         <Sphere
           color="#FCA016"
           width="300px"
           height="300px"
-          className="absolute top-[200px] left-[200px]"/>
+          className="absolute top-[80px] left-[200px]"/>
+        <Sphere
+          color="#FC165B"
+          width="300px"
+          height="300px"
+          className="absolute bottom-[200px] right-[200px]"/>
+        <Sphere
+          color="#6016FC"
+          width="200px"
+          height="200px"
+          className="absolute bottom-[100px] right-[400px]"/>
       </Section.Back>
       <Section.Front>
         <div className="flex gap-5 w-fit h-fit m-auto items-center relative">
           <div className="bg-light h-40 w-32 absolute top-5 left-5 rounded-md p-5 text-white text-opacity-60 shadow-md hover:-translate-y-2 transition-transform">
-            Lorem ipsum dolor
           </div>
           <div className="bg-light h-40 w-32 absolute bottom-20 left-52 rounded-md p-5 text-white text-opacity-60 shadow-md hover:-translate-y-2 transition-transform">
-            Sit amet
           </div>
           <div className="bg-light h-24 w-32 absolute bottom-5 left-10 rounded-md p-5 text-white text-opacity-60 shadow-md hover:-translate-y-2 transition-transform">
-            flap flap flap
           </div>
-          <div className="w-1/3 grid grid-cols-10 grid-rows-10 flex-shrink-0 aspect-square rounded-[30%] overflow-hidden">
-            {Array.from({ length: 100 }).map((_, index) => <div key={index} className="border-light border hover:bg-light"></div>)}
+          <div
+            className="w-1/3 flex-shrink-0 aspect-square rounded-[30%] overflow-hidden"
+            style={
+              {
+                background: `
+                  repeating-linear-gradient(
+                    to right,
+                    transparent 0 2rem,
+                    #fff1 2rem 2.1rem
+                  ),
+                  repeating-linear-gradient(
+                    to bottom,
+                    transparent 0 2rem,
+                    #fff1 2rem 2.1rem
+                  )
+                `
+              }
+            }>
           </div>
           <div className="flex gap-5 flex-col">
             <SectionBadge>How We Work?</SectionBadge>
             <PageTitle>Everything is well planned, well designed and developed wholeheartedly</PageTitle>
             <PageDescription>Careful planning makes us confident, developed with best practices so that the project can be maintained. We always test projects before they are shipped.</PageDescription>
+          </div>
+        </div>
+        <div className="flex gap-5 w-fit h-fit m-auto items-center">
+          <div className="flex gap-5 flex-col w-2/4">
+            <SectionBadge>Our Team</SectionBadge>
+            <PageTitle>We{"'"}re a team of designers, engineers and analysts</PageTitle>
+            <PageDescription>Our team consists of many creative people. We are committed to maintaining quality work as well as speed. These creative people work together to create maximum work results.</PageDescription>
+            <Button colorScheme="white" colorVariant="light" className="w-fit">See Our Team</Button>
+          </div>
+          <div className="flex-grow h-full relative">
+            <div className="absolute bottom-0 left-0 border-dashed border-4 w-56 aspect-square border-white border-opacity-5 rounded-lg"></div>
+            <div className="absolute top-0 left-10 rounded-lg bg-light aspect-video h-56 hover:-translate-y-5 transition-transform gap-1 flex p-5">
+              <div className="rounded-md aspect-square w-2 bg-yellow-400 h-fit"></div>
+              <div className="rounded-md aspect-square w-2 bg-red h-fit"></div>
+              <div className="rounded-md aspect-square w-2 bg-green h-fit"></div>
+            </div>
+            <div className="absolute right-5 top-0 bottom-0 w-56 bg-carddark aspect-square m-auto rounded-lg border-2 border-white border-opacity-5 h-fit hover:-translate-y-5 transition-transform">
+            </div>
           </div>
         </div>
       </Section.Front>
