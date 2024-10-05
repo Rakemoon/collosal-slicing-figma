@@ -12,6 +12,7 @@ import BlogCard from "#components/molecules/blog-card";
 import FaqAccordion from "#components/molecules/faq-accordion";
 import PageDescription from "#components/atoms/page-description";
 import CloudTag from "#components/atoms/cloud-tag";
+import AuthorCard from "#components/organism/author-card";
 
 export default function Components() {
     return <div className="grid place-content-center min-h-screen bg-dark text-muted gap-4 p-2 max-w-full">
@@ -307,6 +308,19 @@ export default function Components() {
         </FaqAccordion>
         <div>
             <CloudTag>Figma</CloudTag>
+        </div>
+
+        <div>
+            <AuthorCard
+                name="Alex Berner"
+                job="UI Designer"
+                description="Night subdue their morning created every light earth very darkness they're you're deep female. Tree sixth divided greater, midst earth forth won't for moved."
+                links={{
+                    x: "https://x.com",
+                    facebook: "https://facebook.com",
+                    linkedin: "https://linkedin.com"
+                }}
+            />
         </div>
     </div>
 }
