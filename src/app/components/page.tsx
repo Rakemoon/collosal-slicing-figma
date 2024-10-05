@@ -13,6 +13,7 @@ import FaqAccordion from "#components/molecules/faq-accordion";
 import PageDescription from "#components/atoms/page-description";
 import CloudTag from "#components/atoms/cloud-tag";
 import AuthorCard from "#components/organism/author-card";
+import Comment from "#components/organism/comment";
 
 export default function Components() {
     return <div className="grid place-content-center min-h-screen bg-dark text-muted gap-4 p-2 max-w-full">
@@ -320,6 +321,11 @@ export default function Components() {
                     facebook: "https://facebook.com",
                     linkedin: "https://linkedin.com"
                 }}
+            />
+            <Comment
+                name="Robert Fox"
+                date={new Date()}
+                content="Moveth fish were living fruitful created from dry his one dry sea you're. It greater doesn't replenish replenish divide moveth. They're under itself without given a male light years fruit rule sea moveth."
             />
         </div>
     </div>
