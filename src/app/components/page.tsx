@@ -1,6 +1,6 @@
 import Button from "#components/atoms/button";
 import FigmaIcon from "#components/icons/figma";
-import { FeatureCard } from "#components/molecules/feature-card";
+import FeatureCard from "#components/molecules/feature-card";
 import Callout from "#components/molecules/callout";
 import Footer from "#components/organism/footer";
 import Navbar from "#components/organism/navbar";
@@ -11,6 +11,7 @@ import TeamCard from "#components/molecules/team-card";
 import BlogCard from "#components/molecules/blog-card";
 import FaqAccordion from "#components/molecules/faq-accordion";
 import PageDescription from "#components/atoms/page-description";
+import CloudTag from "#components/atoms/cloud-tag";
 
 export default function Components() {
     return <div className="grid place-content-center min-h-screen bg-dark text-muted gap-4 p-2 max-w-full">
@@ -304,5 +305,8 @@ export default function Components() {
         <FaqAccordion title="How is the payment system?">
             <PageDescription>If the project has agreed, you will pay an advance, and when the progress reaches 50% you will make a second payment, and when the progress is 100% you will pay it off.</PageDescription>
         </FaqAccordion>
+        <div>
+            <CloudTag>Figma</CloudTag>
+        </div>
     </div>
 }

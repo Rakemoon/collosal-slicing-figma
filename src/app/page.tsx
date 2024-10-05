@@ -5,7 +5,7 @@ import PageTitle from "#components/atoms/page-title";
 import Section from "#components/atoms/section";
 import SectionBadge from "#components/atoms/section-badge";
 import FigmaIcon from "#components/icons/figma";
-import { FeatureCard } from "#components/molecules/feature-card";
+import FeatureCard from "#components/molecules/feature-card";
 import LogoSponsors from "#components/molecules/logo-sponsors";
 import Navbar from "#components/organism/navbar";
 import Image from "next/image";
