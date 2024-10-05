@@ -14,6 +14,10 @@ import PageDescription from "#components/atoms/page-description";
 import CloudTag from "#components/atoms/cloud-tag";
 import AuthorCard from "#components/organism/author-card";
 import Comment from "#components/organism/comment";
+import Form from "#components/organism/form";
+import Label from "#components/atoms/label";
+import Input from "#components/atoms/input";
+import Select from "#components/molecules/select";
 
 export default function Components() {
     return <div className="grid place-content-center min-h-screen bg-dark text-muted gap-4 p-2 max-w-full">
@@ -327,6 +331,36 @@ export default function Components() {
                 date={new Date()}
                 content="Moveth fish were living fruitful created from dry his one dry sea you're. It greater doesn't replenish replenish divide moveth. They're under itself without given a male light years fruit rule sea moveth."
             />
+        </div>
+
+        <div>
+            <Form>
+                <Form.Line>
+                    <Form.Value>
+                        <Label htmlFor="label">Label</Label>
+                        <Input type="text" id="label" />
+                    </Form.Value>  
+                    <Form.Value>
+                        <Label>Company Size</Label>
+                        <Select>
+                            <Select.Option>Mouh</Select.Option>
+                        </Select>
+                    </Form.Value>  
+                </Form.Line>
+                <Form.Line>
+                    <Form.Value>
+                        <Label>Tell Us Your Problem</Label>
+                        <textarea className="rounded-md bg-transparent border-white border border-opacity-10 outline-none p-2"></textarea>
+                    </Form.Value>
+                </Form.Line>
+                <Form.Line>
+                    <Form.Value>
+                        <Select>
+                            <Select.Option>Technology</Select.Option>
+                        </Select>
+                    </Form.Value>
+                </Form.Line>
+            </Form>
         </div>
     </div>
 }
