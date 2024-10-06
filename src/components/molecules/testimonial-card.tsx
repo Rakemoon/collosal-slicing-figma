@@ -9,7 +9,7 @@ type TestimonialCardProps = {
 }
 
 export default function TestimonialCard ({ children, image, name, company }: TestimonialCardProps) {
-    return <article className="flex flex-col justify-center items-center bg-carddark rounded-md w-fit h-fit p-5">
+    return <article className="flex flex-col justify-center items-center bg-carddark rounded-md w-fit h-fit p-5 group hover:-translate-y-5 transition-transform hover:border border-primary">
         <div className="relative mb-5">
             <Image
                 src={image ?? "/assets/placeholder.png"}
@@ -24,7 +24,7 @@ export default function TestimonialCard ({ children, image, name, company }: Tes
         </div>
         <h3 className="font-bold text-lg">{name}</h3>
         <h4 className="text-sm text-opacity-60 text-white">{company}</h4>
-        <p className="text-center text-opacity-60 text-white min-h-20">
+        <p className="text-center text-opacity-60 text-white min-h-20 text-base mt-5 group-hover:text-opacity-100 transition-colors">
             {children}
         </p>
     </article>;

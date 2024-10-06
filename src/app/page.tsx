@@ -7,6 +7,7 @@ import SectionBadge from "#components/atoms/section-badge";
 import FigmaIcon from "#components/icons/figma";
 import FeatureCard from "#components/molecules/feature-card";
 import LogoSponsors from "#components/molecules/logo-sponsors";
+import TestimonialCard from "#components/molecules/testimonial-card";
 import Navbar from "#components/organism/navbar";
 import PricingCard from "#components/organism/pricing-card";
 import ProjectCard from "#components/organism/project-card";
@@ -198,6 +199,24 @@ export default function Home() {
               features={["Daily Backup", "3 hours of maintenance", "Including fixing", "$50/additional hour"]}
             />
           </div>
+        </div>
+      </Section.Front>
+    </Section>
+    <Section>
+      <Section.Back />
+      <Section.Front className="grid place-content-center text-center">
+        <SectionBadge>Testimonial</SectionBadge>
+        <PageTitle>What do our clients say that we never let down ?</PageTitle>
+        <div className="grid grid-cols-3 gap-5 mt-10">
+          <TestimonialCard name="Courtney Henry" company="Biffico Enterprise Ltd.">
+            {'"Very easy to use. I made back the purchase price in just 48 hours! It\'s great. It\'s is both attractive and highly adaptable."'}
+          </TestimonialCard>
+          <TestimonialCard name="Esther Howard" company="Abstergo Ltd.">
+            {'"Your company is truly upstanding and is behind its product 100%. It\'s the perfect solution for our business. It has really helped our business."'}
+          </TestimonialCard>
+          <TestimonialCard name="Ronal Richards" company="Barone LLC.">
+            {'"I am really satisfied with it. I\'m good to go. It really saves me time and effort. It\'s is exactly what our business has been lacking. "'}
+          </TestimonialCard>
         </div>
       </Section.Front>
     </Section>
