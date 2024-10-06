@@ -18,9 +18,11 @@ import Form from "#components/organism/form";
 import Label from "#components/atoms/label";
 import Input from "#components/atoms/input";
 import Select from "#components/molecules/select";
+import { CardListIcon, ListIcon } from "#components/molecules/icon-card";
+import TwitterIcon from "#components/icons/twitter";
 
 export default function Components() {
-    return <div className="grid place-content-center min-h-screen bg-dark text-muted gap-4 p-2 max-w-full">
+    return <div className="grid min-h-screen bg-dark text-muted gap-4 p-2 max-w-full">
         <h1 className="text-4xl font-bold w-fit mx-auto pb-5">Components List</h1>
         <div className="p-2 border-dashed border-2 border-highlight gap-2 flex flex-wrap items-center w-fit">
             <Button
@@ -361,6 +363,26 @@ export default function Components() {
                     </Form.Value>
                 </Form.Line>
             </Form>
+        </div>
+        <div className="flex flex-col gap-2.5">
+            <ListIcon
+                icon={<TwitterIcon />}
+                keyVal="Key"
+                value="Value"
+            />
+            <ListIcon
+                icon={<TwitterIcon />}
+                value="Value"
+            />
+            <CardListIcon
+                icon={<TwitterIcon />}
+                cardName="Card Name"
+            />
+            <CardListIcon
+                icon={<TwitterIcon />}
+                cardName="Card Name"
+                description="card description"
+            />
         </div>
     </div>
 }
