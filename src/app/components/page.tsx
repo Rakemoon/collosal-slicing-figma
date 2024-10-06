@@ -20,6 +20,7 @@ import Input from "#components/atoms/input";
 import Select from "#components/molecules/select";
 import { CardListIcon, ListIcon } from "#components/molecules/icon-card";
 import TwitterIcon from "#components/icons/twitter";
+import ProjectCard from "#components/organism/project-card";
 
 export default function Components() {
     return <div className="grid min-h-screen bg-dark text-muted gap-4 p-2 max-w-full">
@@ -382,6 +383,11 @@ export default function Components() {
                 icon={<TwitterIcon />}
                 cardName="Card Name"
                 description="card description"
+            />
+            <ProjectCard
+                title="Project Name"
+                description="Project Description"
+                detail="Detail"
             />
         </div>
     </div>
