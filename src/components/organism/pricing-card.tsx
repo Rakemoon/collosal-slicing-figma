@@ -18,6 +18,7 @@ export default function PricingCard({
         cn(
             "rounded-md p-5",
             "flex flex-col gap-10",
+            "hover:scale-110 transition-transform hover:z-10",
             className,
         )
     }>
