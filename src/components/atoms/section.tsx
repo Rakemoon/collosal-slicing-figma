@@ -24,7 +24,7 @@ Section.Front = function SectionFront({ children, className = "" }: SectionProps
             cn(
                 "h-screen px-52 py-5 flex flex-col items-center gap-5 backdrop-blur-lg bg-dark bg-opacity-90",
                 "[grid-row:_1_/_2] [grid-column:_1_/_2]",
-                className
+                className,
             )
         }>
         {children}
