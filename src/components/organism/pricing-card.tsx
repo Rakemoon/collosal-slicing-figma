@@ -25,16 +25,16 @@ export default function PricingCard({
             <h3 className="font-bold">{name}</h3>
             <div className="flex flex-col">
                 <p className="text-xs">Starting From</p>
-                <p className="text-4xl font-bold">${price}</p>
+                <p className="text-4xl font-bold">{price}$</p>
             </div>
         </header>
         <article>
-            <ul className="mx-auto w-fit flex flex-col gap-2">
+            <ul className="mx-auto w-fit flex flex-col gap-2 text-center">
                 {features.map((x, i) => <li key={i}>{x}</li>)}
             </ul>
         </article>
         <footer>
-            <Button className="w-full mix-blend-lighten" colorScheme="white">Button</Button>
+            <Button className="w-full mix-blend-lighten" colorScheme="white">Detail</Button>
         </footer>
     </section>;
 }

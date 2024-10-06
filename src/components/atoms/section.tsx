@@ -2,7 +2,7 @@ import { cn } from "#utils/index";
 import { ReactNode } from "react";
 
 type SectionProps = {
-    children: ReactNode,
+    children?: ReactNode,
     className?: string
 }
 

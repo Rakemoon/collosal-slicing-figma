@@ -8,6 +8,8 @@ import FigmaIcon from "#components/icons/figma";
 import FeatureCard from "#components/molecules/feature-card";
 import LogoSponsors from "#components/molecules/logo-sponsors";
 import Navbar from "#components/organism/navbar";
+import PricingCard from "#components/organism/pricing-card";
+import ProjectCard from "#components/organism/project-card";
 import Image from "next/image";
 
 export default function Home() {
@@ -141,6 +143,60 @@ export default function Home() {
             </div>
             <div className="absolute right-5 top-0 bottom-0 w-56 bg-carddark aspect-square m-auto rounded-lg border-2 border-white border-opacity-5 h-fit hover:-translate-y-5 transition-transform">
             </div>
+          </div>
+        </div>
+      </Section.Front>
+    </Section>
+    <Section>
+      <Section.Back>
+        <Sphere
+          color="#6016FC"
+          width="200px"
+          height="200px"
+          className="absolute bottom-[100px] right-[400px]"/>
+      </Section.Back>
+      <Section.Front className="flex flex-col justify-center gap-5">
+        <SectionBadge>Projects</SectionBadge>
+        <PageTitle className="text-center">We have completed many amazing projects that you will not believe</PageTitle>
+        <div className="grid grid-cols-2 gap-5">
+          <ProjectCard
+            title="The Mobile App Landing Page"
+            description="A Landing page for mobile app"
+            detail="Detail"
+          />
+          <ProjectCard
+            title="The Desktop App Landing Page"
+            description="A Landing page for desktop app"
+            detail="Detail"
+          />
+        </div>
+      </Section.Front>
+    </Section>
+    <Section>
+      <Section.Back />
+      <Section.Front className="grid place-content-center">
+        <div className="flex flex-col items-center gap-10 bg-highlight rounded-lg p-20">
+          <SectionBadge>Get Started</SectionBadge>
+          <PageTitle className="text-center">What do you need ? Choose a service that can help you</PageTitle>
+          <div className="grid grid-cols-3 gap-5">
+            <PricingCard
+              className="bg-[#3F2379]"
+              name="UI Design"
+              price={1200}
+              features={["10 design pages", "Well-documented", "4 revisions", "$100/additional page"]}
+            />
+            <PricingCard
+              className="bg-[#233679]"
+              name="Development"
+              price={5000}
+              features={["Web & Mobile", "Well-documented", "8 revisions", "$1000/additional feature"]}
+            />
+            <PricingCard
+              className="bg-[#792366]"
+              name="Maintenance"
+              price={3000}
+              features={["Daily Backup", "3 hours of maintenance", "Including fixing", "$50/additional hour"]}
+            />
           </div>
         </div>
       </Section.Front>
