@@ -21,7 +21,7 @@ Form.Line = function FormLine({ children }: { children?: ReactNode}) {
 Form.Value = function FormValue({ children, inline = false }: { children?: ReactNode; inline?: boolean }) {
     return <div className={
         cn(
-            "flex gap-1 flex-grow",
+            "flex gap-1 flex-grow w-1/2",
             inline ? "flex-row items-center" : "flex-col"
         )
     }>{children}</div>;
