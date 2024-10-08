@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Callout from "#components/molecules/callout";
+import Button from "#components/atoms/button";
+import Footer from "#components/organism/footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,7 +31,95 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <main className="h-fit bg-dark min-h-screen min-w-screen max-w-full text-muted relative overflow-hidden flex flex-col">
+          {children}
+          <section className="h-fit px-[13vw] py-5 flex flex-col gap-20 max-md:px-2.5">
+              <Callout message="We've prepared everything, it's time for you to tell the problem">
+                <Button className="text-nowrap w-full">Send Quote</Button>
+                <Button colorVariant="light" className="text-nowrap w-full">Ask Us</Button>
+              </Callout>
+                  <Footer
+                      list={
+                          [
+                              {
+                                  title: "Services",
+                                  items: [
+                                      {
+                                          name: "Web Development",
+                                          href: "#"
+                                      },
+                                      {
+                                          name: "App Development",
+                                          href: "#"
+                                      },
+                                      {
+                                          name: "UI Design",
+                                          href: "#"
+                                      },
+                                      {
+                                          name: "Consultation",
+                                          href: "#"
+                                      },
+                                      {
+                                          name: "Maintenance",
+                                          href: "#"
+                                      },
+                                  ]
+                              },
+                              {
+                                  title: "Company",
+                                  items: [
+                                      {
+                                          name: "About",
+                                          href: "#"
+                                      },
+                                      {
+                                          name: "Contact",
+                                          href: "#"
+                                      },
+                                      {
+                                          name: "Send Quote",
+                                          href: "/quote"
+                                      },
+                                      {
+                                          name: "Privacy Policy",
+                                          href: "#"
+                                      },
+                                      {
+                                          name: "Term of Service",
+                                          href: "#"
+                                      },
+                                      {
+                                          name: "Jobs",
+                                          href: "#"
+                                      },
+                                  ]
+                              },
+                              {
+                                  title: "Resources",
+                                  items: [
+                                      {
+                                          name: "Support",
+                                          href: "#"
+                                      },
+                                      {
+                                          name: "Documentation",
+                                          href: "#"
+                                      },
+                                      {
+                                          name: "License",
+                                          href: "#"
+                                      },
+                                      {
+                                          name: "Sitemap",
+                                          href: "#"
+                                      },
+                                  ]
+                              },
+                          ]
+                      } />
+          </section>
+        </main>
       </body>
     </html>
   );

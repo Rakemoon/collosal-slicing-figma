@@ -6,7 +6,7 @@ export default function Form({className = "", children, ...props}: DetailedHTMLP
         {...props}
         className={
             cn(
-                "flex p-5 flex-col gap-5 w-max",
+                "flex p-5 flex-col gap-5 w-full",
                 className
             )
         } >
@@ -15,14 +15,15 @@ export default function Form({className = "", children, ...props}: DetailedHTMLP
 }
 
 Form.Line = function FormLine({ children }: { children?: ReactNode}) {
-    return <div className="flex gap-5 w-full">{children}</div>;
+    return <div className="flex gap-5 w-full max-md:flex-col">{children}</div>;
 }
 
 Form.Value = function FormValue({ children, inline = false }: { children?: ReactNode; inline?: boolean }) {
     return <div className={
         cn(
-            "flex gap-1 flex-grow",
-            inline ? "flex-row items-center" : "flex-col"
+            "flex gap-1 flex-grow w-full",
+            inline ? "flex-row items-center" : "flex-col",
+            "max-md:flex-col"
         )
     }>{children}</div>;
 }
