@@ -8,7 +8,6 @@ import FigmaIcon from "#components/icons/figma";
 import FeatureCard from "#components/molecules/feature-card";
 import LogoSponsors from "#components/molecules/logo-sponsors";
 import TestimonialCard from "#components/molecules/testimonial-card";
-import Navbar from "#components/organism/navbar";
 import PricingCard from "#components/organism/pricing-card";
 import ProjectCard from "#components/organism/project-card";
 import Image from "next/image";
@@ -17,8 +16,7 @@ export default function Home() {
   return <>
     <Section>
       <Section.Back isFirst />
-      <Section.Front>
-        <Navbar variant="naked" />
+      <Section.Front isFirst>
         <div className="max-w-[37rem] text-center flex flex-col gap-5 mt-auto">
           <SectionBadge>CLIENT-DEVELOPMENT DRIVEN</SectionBadge>
           <PageTitle>We Design. We Develop. We Ship. In The Same Day.</PageTitle>

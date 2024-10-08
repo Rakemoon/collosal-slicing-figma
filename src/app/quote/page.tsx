@@ -7,14 +7,12 @@ import Section from "#components/atoms/section";
 import SectionBadge from "#components/atoms/section-badge";
 import Select from "#components/molecules/select";
 import Form from "#components/organism/form";
-import Navbar from "#components/organism/navbar";
 
 export default function QuotePage () {
     return <>
         <Section>
             <Section.Back isFirst />
-            <Section.Front>
-                <Navbar variant="naked" />
+            <Section.Front isFirst>
                 <div className="flex w-fit my-auto gap-20">
                     <div className="w-fit flex flex-col gap-5 justify-center">
                         <SectionBadge>SEND QUOTE</SectionBadge>
