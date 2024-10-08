@@ -5,18 +5,16 @@ import PageTitle from "#components/atoms/page-title";
 import Section from "#components/atoms/section";
 import SectionBadge from "#components/atoms/section-badge";
 import FigmaIcon from "#components/icons/figma";
-import Callout from "#components/molecules/callout";
 import FeatureCard from "#components/molecules/feature-card";
 import LogoSponsors from "#components/molecules/logo-sponsors";
 import TestimonialCard from "#components/molecules/testimonial-card";
-import Footer from "#components/organism/footer";
 import Navbar from "#components/organism/navbar";
 import PricingCard from "#components/organism/pricing-card";
 import ProjectCard from "#components/organism/project-card";
 import Image from "next/image";
 
 export default function Home() {
-  return <main className="h-fit bg-dark min-h-screen min-w-screen max-w-full text-muted relative overflow-hidden">
+  return <>
     <Section>
       <Section.Back>
         <Sphere
@@ -222,91 +220,5 @@ export default function Home() {
         </div>
       </Section.Front>
     </Section>
-    <section className="h-fit px-52 py-5 flex flex-col gap-20">
-        <Callout message="We've prepared everything, it's time for you to tell the problem">
-          <Button>Send Quote</Button>
-          <Button colorVariant="light">Ask Us</Button>
-        </Callout>
-            <Footer
-                list={
-                    [
-                        {
-                            title: "Services",
-                            items: [
-                                {
-                                    name: "Web Development",
-                                    href: "#"
-                                },
-                                {
-                                    name: "App Development",
-                                    href: "#"
-                                },
-                                {
-                                    name: "UI Design",
-                                    href: "#"
-                                },
-                                {
-                                    name: "Consultation",
-                                    href: "#"
-                                },
-                                {
-                                    name: "Maintenance",
-                                    href: "#"
-                                },
-                            ]
-                        },
-                        {
-                            title: "Company",
-                            items: [
-                                {
-                                    name: "About",
-                                    href: "#"
-                                },
-                                {
-                                    name: "Contact",
-                                    href: "#"
-                                },
-                                {
-                                    name: "Send Quote",
-                                    href: "#"
-                                },
-                                {
-                                    name: "Privacy Policy",
-                                    href: "#"
-                                },
-                                {
-                                    name: "Term of Service",
-                                    href: "#"
-                                },
-                                {
-                                    name: "Jobs",
-                                    href: "#"
-                                },
-                            ]
-                        },
-                        {
-                            title: "Resources",
-                            items: [
-                                {
-                                    name: "Support",
-                                    href: "#"
-                                },
-                                {
-                                    name: "Documentation",
-                                    href: "#"
-                                },
-                                {
-                                    name: "License",
-                                    href: "#"
-                                },
-                                {
-                                    name: "Sitemap",
-                                    href: "#"
-                                },
-                            ]
-                        },
-                    ]
-                } />
-    </section>
-  </main>;
+  </>;
 }
