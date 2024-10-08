@@ -1,10 +1,11 @@
 import Logo from "#components/atoms/logo";
+import Link from "next/link";
 
 export default function LogoName() {
-    return <div className="flex gap-4 items-center">
+    return <Link className="flex gap-4 items-center cursor-pointer" href="/">
         <Logo />
         <span className="text-2xl font-bold text-white">
             Collosal.
         </span>
-    </div>
+    </Link>
 }
