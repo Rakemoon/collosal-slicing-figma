@@ -16,23 +16,7 @@ import Image from "next/image";
 export default function Home() {
   return <>
     <Section>
-      <Section.Back>
-        <Sphere
-          color="#16FCD2"
-          width="780px"
-          height="780px"
-          className="absolute -top-[100px] left-[200px]"/>
-        <Sphere
-          color="#FCA016"
-          width="780px"
-          height="780px"
-          className="absolute top-[100px] -left-[200px]"/>
-        <Sphere
-          color="#FC165B"
-          width="780px"
-          height="780px"
-          className="absolute -top-[200px] -right-[200px]"/>
-      </Section.Back>
+      <Section.Back isFirst />
       <Section.Front>
         <Navbar variant="naked" />
         <div className="max-w-[37rem] text-center flex flex-col gap-5 mt-auto">

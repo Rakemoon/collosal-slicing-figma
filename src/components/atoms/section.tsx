@@ -1,5 +1,6 @@
 import { cn } from "#utils/index";
 import { ReactNode } from "react";
+import Sphere from "./circle";
 
 type SectionProps = {
     children?: ReactNode,
@@ -32,7 +33,7 @@ Section.Front = function SectionFront({ children, className = "" }: SectionProps
 
 }
 
-Section.Back = function SectionBack({ children, className = "" }: SectionProps) {
+Section.Back = function SectionBack({ children, className = "", isFirst = false }: SectionProps & { isFirst?: boolean }) {
     return <div
         className={
             cn(
@@ -41,6 +42,23 @@ Section.Back = function SectionBack({ children, className = "" }: SectionProps) 
                 className
             )
         }>
+        {isFirst && <>
+            <Sphere
+            color="#16FCD2"
+            width="780px"
+            height="780px"
+            className="absolute -top-[100px] left-[200px]"/>
+            <Sphere
+            color="#FCA016"
+            width="600px"
+            height="600px"
+            className="absolute bottom-[0px] -left-[200px]"/>
+            <Sphere
+            color="#FC165B"
+            width="780px"
+            height="780px"
+            className="absolute -top-[200px] -right-[200px]"/>
+        </>}
         {children}
     </div>;
 }

@@ -12,7 +12,7 @@ import Navbar from "#components/organism/navbar";
 export default function QuotePage () {
     return <>
         <Section>
-            <Section.Back />
+            <Section.Back isFirst />
             <Section.Front>
                 <Navbar variant="naked" />
                 <div className="flex w-fit my-auto gap-20">
