@@ -18,7 +18,7 @@ export default function Sphere({ className = "", height, width, color }: SphereP
         }
     } className={
         cn(
-            "rounded-full animate-pulse",
+            "rounded-full animate-pulse max-md:scale-50",
             className,
         )
     }></div>;

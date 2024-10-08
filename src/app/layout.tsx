@@ -31,12 +31,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <main className="h-fit bg-dark min-h-screen min-w-screen max-w-full text-muted relative overflow-hidden">
+        <main className="h-fit bg-dark min-h-screen min-w-screen max-w-full text-muted relative overflow-hidden flex flex-col">
           {children}
-          <section className="h-fit px-52 py-5 flex flex-col gap-20">
+          <section className="h-fit px-[13vw] py-5 flex flex-col gap-20 max-md:px-2.5">
               <Callout message="We've prepared everything, it's time for you to tell the problem">
-                <Button>Send Quote</Button>
-                <Button colorVariant="light">Ask Us</Button>
+                <Button className="text-nowrap w-full">Send Quote</Button>
+                <Button colorVariant="light" className="text-nowrap w-full">Ask Us</Button>
               </Callout>
                   <Footer
                       list={

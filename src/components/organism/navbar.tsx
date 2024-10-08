@@ -15,14 +15,14 @@ export default function Navbar({ variant, className = "" }: NavbarProps) {
         )
     }>
         <LogoName />
-        <ul className="flex gap-10 items-end">
+        <ul className="flex gap-10 items-end max-sm:hidden">
             <li>Services</li>
             <li>How We Work</li>
             <li>Projects</li>
             <li>About</li>
         </ul>
         <Button
-            className="shadow-md"
+            className="shadow-md max-sm:hidden"
             colorScheme="white"
             colorVariant="light"
             size="sm">Contact</Button>

@@ -13,14 +13,14 @@ export default function QuotePage () {
         <Section>
             <Section.Back isFirst />
             <Section.Front isFirst>
-                <div className="flex w-fit my-auto gap-20">
+                <div className="flex w-fit my-auto gap-20 max-md:flex-col">
                     <div className="w-fit flex flex-col gap-5 justify-center">
                         <SectionBadge>SEND QUOTE</SectionBadge>
                         <PageTitle>Tell us about your problem and how we can help</PageTitle>
                         <PageDescription>We are happy to help you, tell us what is the problem with your company, and we are ready to answer these problems. It usually takes a few minutes for us to respond.</PageDescription>
                         <Button className="w-fit" colorVariant="light" colorScheme="white">Ask Us</Button>
                     </div>
-                    <div className="w-fit bg-light rounded-md py-5 px-2.5">
+                    <div className="w-fit bg-light rounded-md py-5 px-2.5 max-md:w-full">
                         <Form className="gap-10">
                             <Form.Line>
                                 <Form.Value>
