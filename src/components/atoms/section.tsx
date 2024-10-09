@@ -20,7 +20,7 @@ export default function Section({ children, className = "" }: SectionProps) {
     </section>
 }
 
-Section.Front = function SectionFront({ children, className = "", isFirst = false }: SectionProps & { isFirst?: boolean }) {
+Section.Front = function SectionFront({ children, className = "", isFirst = false, navSelected }: SectionProps & { isFirst?: boolean, navSelected?: Parameters<typeof Navbar>[0]["navSelected"] }) {
     return <div
         className={
             cn(
@@ -30,7 +30,7 @@ Section.Front = function SectionFront({ children, className = "", isFirst = fals
                 className,
             )
         }>
-        {isFirst && <Navbar variant="naked" />}
+        {isFirst && <Navbar variant="naked" navSelected={navSelected} />}
         {children}
     </div>
 
