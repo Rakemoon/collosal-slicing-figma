@@ -1,12 +1,20 @@
 import Button from "#components/atoms/button";
 import LogoName from "#components/molecules/logo-name";
 import { cn } from "#utils/index";
+import Link from "next/link";
 
+const navList = [
+    { href: "/", name: "Services" },
+    { href: "/", name: "How We Work" },
+    { href: "/projects", name: "Projects" },
+    { href: "/", name: "About" },
+] as const;
 type NavbarProps = {
     readonly variant?: "naked" | "highlight";
     readonly className?: string;
+    readonly navSelected?: typeof navList[number]["name"];
 };
-export default function Navbar({ variant, className = "" }: NavbarProps) {
+export default function Navbar({ variant, className = "", navSelected }: NavbarProps) {
     return <nav className={
         cn(
             "flex justify-between items-center gap-5 w-full relative",
@@ -26,10 +34,18 @@ export default function Navbar({ variant, className = "" }: NavbarProps) {
                 "max-sm:bg-carddark right-0 top-10 max-sm:rounded-md max-sm:p-5 max-sm:shadow-sm",
             )
         }>
-            <li>Services</li>
-            <li>How We Work</li>
-            <li>Projects</li>
-            <li>About</li>
+            {navList.map(x => <li key={x.name + x.href}>
+                <Link
+                    href={x.href}
+                    className={
+                        cn(
+                            "text-white",
+                            x.name === navSelected ? "" : "text-opacity-60"
+                        )
+                    }>
+                    {x.name}
+                </Link>
+            </li>)}
         </ul>
         <Button
             className="shadow-md max-sm:hidden"
