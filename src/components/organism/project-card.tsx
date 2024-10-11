@@ -9,14 +9,14 @@ type ProjectCardProps = {
     className?: string;
     image?: string;
 }
-export default function ProjectCard({ title, description, detail, className = "", image}: ProjectCardProps) {
+export default function ProjectCard({ title, description, detail, className = "", image }: ProjectCardProps) {
     return <div className={
         cn(
             "flex flex-col gap-5 items-center",
             className
         )
     }>
-        <div className="w-[31.375rem] h-[27.563rem] bg-carddark border border-white border-opacity-10 rounded-md">
+        <div className="w-[31.375rem] h-[27.563rem] max-sm:w-[calc(31.375rem_/_2)] max-sm:h-[calc(27.563rem_/_2)] bg-carddark border border-white border-opacity-10 rounded-md">
             <Image
                 src={image ?? "/assets/placeholder.png"}
                 alt="project-image"

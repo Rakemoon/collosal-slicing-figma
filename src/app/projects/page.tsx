@@ -10,8 +10,8 @@ export default function ProjectsPage() {
             <Section.Back isFirst />
             <Section.Front isFirst navSelected="Projects">
                 <div className="flex flex-col gap-5">
-                    <div className="flex py-10 items-center justify-between border-b-2 border-light">
-                        <div className="w-1/2">
+                    <div className="flex py-10 items-center justify-between border-b-2 border-light max-md:flex-col max-md:items-start gap-5">
+                        <div className="w-1/2 max-md:w-full">
                             <SectionBadge>PROJECTS</SectionBadge>
                             <PageTitle>We have completed many amazing projects that you will not believe</PageTitle>
                         </div>
