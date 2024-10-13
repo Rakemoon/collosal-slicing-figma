@@ -51,7 +51,7 @@ export default function Navbar({ variant, className = "", navSelected }: NavbarP
             className="shadow-md max-sm:hidden"
             colorScheme="white"
             colorVariant="light"
-            size="sm">Contact</Button>
+            size="sm"><Link href="/contact">Button</Link></Button>
         <label className="h-5 w-5 rounded-full bg-light shadow-md hidden max-sm:block" htmlFor="navbar"></label>
     </nav>;
 }
